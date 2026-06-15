@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singapore MRT Network Simulator - Project Index</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 2px solid #D6001C;
+            padding-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #9D00AA;
+            margin-bottom: 20px;
+        }
+        
+        .description {
+            font-size: 1em;
+            color: #cccccc;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .card {
+            background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+            border: 1px solid #444444;
+            border-radius: 8px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .card:hover {
+            border-color: #D6001C;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(214, 0, 28, 0.2);
+        }
+        
+        .card.nsl {
+            border-top: 3px solid #D6001C;
+        }
+        
+        .card.nel {
+            border-top: 3px solid #9D00AA;
+        }
+        
+        .card h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .line-badge {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            font-size: 0.8em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .badge-nsl {
+            background-color: #D6001C;
+        }
+        
+        .badge-nel {
+            background-color: #9D00AA;
+        }
+        
+        .card p {
+            color: #aaaaaa;
+            margin-bottom: 15px;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .stat {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #D6001C;
+        }
+        
+        .stat-label {
+            font-size: 0.85em;
+            color: #888888;
+            margin-top: 5px;
+        }
+        
+        .file-structure {
+            background: #0a0a0a;
+            border: 1px solid #333333;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            overflow-x: auto;
+        }
+        
+        .file-structure h3 {
+            margin-bottom: 15px;
+            color: #D6001C;
+        }
+        
+        .file-tree {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #00ff00;
+            line-height: 1.8;
+        }
+        
+        .folder { color: #FFD700; }
+        .file { color: #00ff00; }
+        .indent { display: inline-block; width: 20px; }
+        
+        .features {
+            background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+            border: 1px solid #444444;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .features h2 {
+            color: #D6001C;
+            margin-bottom: 20px;
+        }
+        
+        .feature-list {
+            columns: 2;
+            gap: 30px;
+        }
+        
+        .feature-item {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .feature-item:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #9D00AA;
+            font-weight: bold;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            color: #D6001C;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333333;
+            padding-bottom: 10px;
+        }
+        
+        .code-block {
+            background: #0a0a0a;
+            border-left: 3px solid #D6001C;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        
+        .code-block code {
+            font-family: 'Courier New', monospace;
+            color: #00ff00;
+            font-size: 0.9em;
+        }
+        
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .tech-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 4px;
+            border-left: 3px solid #9D00AA;
+        }
+        
+        .tech-item strong {
+            color: #D6001C;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid #333333;
+            color: #666666;
+            margin-top: 50px;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .status-active {
+            background: rgba(0, 255, 0, 0.1);
+            color: #00ff00;
+            border: 1px solid #00ff00;
+        }
+        
+        .status-development {
+            background: rgba(255, 215, 0, 0.1);
+            color: #FFD700;
+            border: 1px solid #FFD700;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .feature-list {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚇 Singapore MRT Network Simulator</h1>
+            <p class="subtitle">Native SwiftUI iPad Application</p>
+            <p class="description">
+                An authentic replica of Singapore's MRT Operations Control Centre featuring real-time train simulation, 
+                passenger demand modeling, and interactive network visualization. Built with SwiftUI for iPad with 
+                MapKit integration and Canvas-based schematic mapping.
+            </p>
+        </header>
+
+        <div class="section">
+            <h2>📋 Project Status</h2>
+            <div class="grid">
+                <div class="card nsl">
+                    <h2><span class="line-badge badge-nsl">NS</span> North South Line</h2>
+                    <span class="status-badge status-active">ACTIVE</span>
+                    <p>The oldest and longest line in the Singapore MRT network.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-value">28</div>
+                            <div class="stat-label">Stations</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">25</div>
+                            <div class="stat-label">Active Trains</div>
+                        </div>
+                    </div>
+                    <p><strong>Terminals:</strong> Jurong East → Marina South Pier</p>
+                    <p><strong>Interchanges:</strong> Dhoby Ghaut (CCL, NEL), City Hall & Raffles Place (EWL)</p>
+                </div>
+
+                <div class="card nel">
+                    <h2><span class="line-badge badge-nel">NE</span> North East Line</h2>
+                    <span class="status-badge status-active">ACTIVE</span>
+                    <p>Branch line connecting northeast regions to the CBD.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-value">16</div>
+                            <div class="stat-label">Stations</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">20</div>
+                            <div class="stat-label">Active Trains</div>
+                        </div>
+                    </div>
+                    <p><strong>Terminals:</strong> Punggol → Jurong East</p>
+                    <p><strong>Interchanges:</strong> Serangoon (NSL, CCL), Dhoby Ghaut (NSL, CCL)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>✨ Key Features</h2>
+            <div class="features">
+                <div class="feature-list">
+                    <div class="feature-item">Real-time multi-train simulation (45+ simultaneous trains)</div>
+                    <div class="feature-item">Passenger demand modeling based on time-of-day and station type</div>
+                    <div class="feature-item">Interactive schematic map with zoom and pan gestures</div>
+                    <div class="feature-item">Geographic map overlay with MapKit integration</div>
+                    <div class="feature-item">Station detail panel with demand indicators</div>
+                    <div class="feature-item">Realistic fleet management and train spacing</div>
+                    <div class="feature-item">Peak hour simulation (7-9 AM, 5-7 PM)</div>
+                    <div class="feature-item">iPad-optimized landscape interface</div>
+                    <div class="feature-item">Dark mode Operations Control Centre aesthetic</div>
+                    <div class="feature-item">Pause/resume simulation controls</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🛠 Technology Stack</h2>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <strong>Language:</strong> Swift 5.9+
+                </div>
+                <div class="tech-item">
+                    <strong>UI Framework:</strong> SwiftUI
+                </div>
+                <div class="tech-item">
+                    <strong>Maps:</strong> MapKit
+                </div>
+                <div class="tech-item">
+                    <strong>Graphics:</strong> Canvas (SwiftUI)
+                </div>
+                <div class="tech-item">
+                    <strong>Data:</strong> JSON (Bundle)
+                </div>
+                <div class="tech-item">
+                    <strong>Target:</strong> iOS 15+ (iPad)
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📁 Project Structure</h2>
+            <div class="file-structure">
+                <h3>Directory Layout</h3>
+                <div class="file-tree">
+                    <div><span class="folder">📦 mrt-simulator/</span></div>
+                    <div><span class="indent"></span><span class="folder">📁 Sources/</span></div>
+                    <div><span class="indent"></span><span class="indent"></span><span class="folder">📁 Models/</span></div>
+                    <div><span class="indent"></span><span class="indent"></span><span class="indent"></span><span class="file">Station.swift</span> - Data structures</div>
+                    <div><span class="indent"></span><span class="indent"></span><span class="indent"></span><span class="file">Train.swift</span> - Train & fleet models</div>
+                    <div><span class="indent"></span><span class="indent"></span><span class="folder">📁 Views/</span></div>
+                    <div><span class="indent"></span><span class="indent"></span><span class="indent"></span><span class="file">ContentView.swift</span> - Main UI</div>
+                    <div><span class="indent"></span><span class="indent"></span><span class="indent"></span><span class="file">SchematicMapView.swift</span> - Canvas line map</div>
+                    <div><span class="indent"></span><span class="indent"></span><span class="indent"></span><span class="file">GeographicMapView.swift</span> - MapKit map</div>
+                    <div><span class="indent"></span><span class="indent"></span><span class="indent"></span><span class="file">StationDetailView.swift</span> - Station panel</div>
+                    <div><span class="indent"></span><span class="indent"></span><span class="folder">📁 ViewModels/</span></div>
+                    <div><span class="indent"></span><span class="indent"></span><span class="indent"></span><span class="file">SimulationViewModel.swift</span> - App state</div>
+                    <div><span class="indent"></span><span class="indent"></span><span class="folder">📁 Managers/</span></div>
+                    <div><span class="indent"></span><span class="indent"></span><span class="indent"></span><span class="file">DataManager.swift</span> - JSON loading</div>
+                    <div><span class="indent"></span><span class="indent"></span><span class="indent"></span><span class="file">TrainSimulationEngine.swift</span> - Train logic</div>
+                    <div><span class="indent"></span><span class="indent"></span><span class="file">MRTSimulatorApp.swift</span> - Entry point</div>
+                    <div><span class="indent"></span><span class="folder">📁 Data/</span></div>
+                    <div><span class="indent"></span><span class="indent"></span><span class="file">nsl_stations.json</span> - NSL station data (28 stations)</div>
+                    <div><span class="indent"></span><span class="indent"></span><span class="file">nel_stations.json</span> - NEL station data (16 stations)</div>
+                    <div><span class="indent"></span><span class="indent"></span><span class="file">line_definitions.json</span> - Line metadata</div>
+                    <div><span class="indent"></span><span class="folder">📁 Resources/</span></div>
+                    <div><span class="indent"></span><span class="indent"></span><span class="file">Assets.xcassets</span> - App icons & images</div>
+                    <div><span class="file">README.md</span> - Documentation</div>
+                    <div><span class="file">.gitignore</span> - Git configuration</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📊 Station Data</h2>
+            <p>Each station includes:</p>
+            <div class="code-block"><code>
+{
+  "code": "NS12",
+  "name": "Dhoby Ghaut",
+  "sequence": 12,
+  "latitude": 1.2983,
+  "longitude": 103.8466,
+  "interchanges": ["CCL", "NEL"],
+  "demandProfile": {
+    "level": "VeryHigh",
+    "peakHours": [7, 8, 9, 17, 18, 19],
+    "avgPassengersPerHour": 8900
+  },
+  "isTerminal": false,
+  "hasDepot": false
+}
+            </code></div>
+        </div>
+
+        <div class="section">
+            <h2>🚀 Getting Started</h2>
+            <h3>Prerequisites:</h3>
+            <ul style="margin-left: 20px; margin-bottom: 20px;">
+                <li>Xcode 14.0 or later</li>
+                <li>iOS 15+ deployment target</li>
+                <li>iPad Air 2 or later (or simulator)</li>
+            </ul>
+            
+            <h3>Installation:</h3>
+            <div class="code-block"><code>
+# Clone the repository
+git clone https://github.com/6rnntz84gk-cyber/mrt-simulator.git
+
+# Navigate to project directory
+cd mrt-simulator
+
+# Open in Xcode
+open MRTSimulator.xcodeproj
+            </code></div>
+
+            <h3>Running:</h3>
+            <ol style="margin-left: 20px;">
+                <li>Select iPad Pro (12.9-inch) simulator or your iPad device</li>
+                <li>Press Cmd+R to build and run</li>
+                <li>The app will launch in landscape orientation</li>
+                <li>Use the line selector to switch between NSL and NEL</li>
+                <li>Tap stations to view details and demand profiles</li>
+                <li>Use Pan/Zoom on the schematic map</li>
+                <li>Tap "Geographic Map" to see real coordinates</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>📈 Simulation Details</h2>
+            <h3>North South Line (NSL)</h3>
+            <p><strong>Fleet Size:</strong> 25 active trains</p>
+            <p><strong>Route:</strong> Jurong East (NS1) → Marina South Pier (NS16 / extension)</p>
+            <p><strong>High Demand Stations:</strong> Jurong East, Orchard, Dhoby Ghaut, City Hall, Raffles Place, Woodlands</p>
+            <p><strong>Headway:</strong> ~2-3 minutes during peak hours</p>
+
+            <h3>North East Line (NEL)</h3>
+            <p><strong>Fleet Size:</strong> 20 active trains</p>
+            <p><strong>Route:</strong> Punggol (NE1) → Jurong East (NE16)</p>
+            <p><strong>High Demand Stations:</strong> Punggol, Serangoon, Dhoby Ghaut, Outram Park, Jurong East</p>
+            <p><strong>Headway:</strong> ~2-3 minutes during peak hours</p>
+
+            <h3>Demand Modeling</h3>
+            <ul style="margin-left: 20px;">
+                <li><strong>Peak Hours (7-9 AM, 5-7 PM):</strong> 1.5x demand multiplier</li>
+                <li><strong>Off-Peak:</strong> 0.5x demand multiplier</li>
+                <li><strong>CBD Stations:</strong> Higher weekday morning and evening demand</li>
+                <li><strong>Residential Stations:</strong> Morning outbound, evening inbound</li>
+                <li><strong>Interchange Stations:</strong> Elevated demand throughout the day</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🔧 Future Enhancements</h2>
+            <div class="grid">
+                <div class="card" style="border-top: 3px solid #FFD700;">
+                    <h3>Planned Features</h3>
+                    <ul style="margin-left: 20px;">
+                        <li>Circle Line (CCL) integration</li>
+                        <li>East West Line (EWL) with branches</li>
+                        <li>Downtown Line (DTL)</li>
+                        <li>Thomson-East Coast Line (TEL)</li>
+                        <li>LRT systems (BPLRT, SKLRT, PGLRT)</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-top: 3px solid #FFD700;">
+                    <h3>Future Lines</h3>
+                    <ul style="margin-left: 20px;">
+                        <li>Jurong Region Line (JRL)</li>
+                        <li>Cross Island Line (CRL)</li>
+                        <li>Regional train integration</li>
+                        <li>Express service simulation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📝 Code Architecture</h2>
+            <h3>MVVM Pattern</h3>
+            <p><strong>Models:</strong> Station, Train, DemandProfile, LineDefinition</p>
+            <p><strong>ViewModels:</strong> SimulationViewModel (manages state), MapViewModel (manages views)</p>
+            <p><strong>Views:</strong> SwiftUI components with Canvas for rendering</p>
+            <p><strong>Managers:</strong> DataManager (JSON loading), TrainSimulationEngine (train logic)</p>
+
+            <h3>Real-Time Updates</h3>
+            <p>The TrainSimulationEngine uses a Timer (1.0s interval) to update train positions, passenger loads, and demand profiles. All updates are dispatched to the main thread for UI synchronization.</p>
+
+            <h3>Data Flow</h3>
+            <div class="code-block"><code>
+DataManager (loads JSON)
+    ↓
+SimulationViewModel (manages state)
+    ↓
+TrainSimulationEngine (updates trains)
+    ↓
+ContentView & Map Views (render UI)
+            </code></div>
+        </div>
+
+        <div class="section">
+            <h2>🤝 Contributing</h2>
+            <p>This is a private repository for collaborative development. To contribute:</p>
+            <ol style="margin-left: 20px;">
+                <li>Create a feature branch: <code>git checkout -b feature/your-feature</code></li>
+                <li>Commit changes: <code>git commit -m "Add feature description"</code></li>
+                <li>Push to branch: <code>git push origin feature/your-feature</code></li>
+                <li>Open a Pull Request for review</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>📞 Support</h2>
+            <p>For issues, questions, or feature requests, please open an issue on the GitHub repository or contact the development team.</p>
+        </div>
+
+        <footer>
+            <p>Singapore MRT Network Simulator © 2026</p>
+            <p>A realistic Operations Control Centre simulation for iPad</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">
+                <a href="https://github.com/6rnntz84gk-cyber/mrt-simulator" style="color: #D6001C; text-decoration: none;">
+                    View on GitHub →
+                </a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
