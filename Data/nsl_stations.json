@@ -1,0 +1,375 @@
+{
+  "line": "NSL",
+  "lineName": "North South Line",
+  "lineColor": "#D6001C",
+  "stations": [
+    {
+      "code": "NS1",
+      "name": "Jurong East",
+      "sequence": 1,
+      "latitude": 1.3339,
+      "longitude": 103.7424,
+      "interchanges": ["EWL"],
+      "demandProfile": {
+        "level": "VeryHigh",
+        "peakHours": [7, 8, 9, 17, 18, 19],
+        "avgPassengersPerHour": 8500
+      },
+      "isTerminal": true,
+      "hasDepot": true
+    },
+    {
+      "code": "NS2",
+      "name": "Bukit Batok",
+      "sequence": 2,
+      "latitude": 1.3496,
+      "longitude": 103.7494,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Moderate",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 3200
+      }
+    },
+    {
+      "code": "NS3",
+      "name": "Bukit Gombak",
+      "sequence": 3,
+      "latitude": 1.3589,
+      "longitude": 103.7556,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Moderate",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 2900
+      }
+    },
+    {
+      "code": "NS4",
+      "name": "Clementi",
+      "sequence": 4,
+      "latitude": 1.3645,
+      "longitude": 103.7618,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "High",
+        "peakHours": [7, 8, 9, 17, 18, 19],
+        "avgPassengersPerHour": 5200
+      }
+    },
+    {
+      "code": "NS5",
+      "name": "Dover",
+      "sequence": 5,
+      "latitude": 1.3098,
+      "longitude": 103.7993,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Low",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 1800
+      }
+    },
+    {
+      "code": "NS6",
+      "name": "Buona Vista",
+      "sequence": 6,
+      "latitude": 1.3048,
+      "longitude": 103.8143,
+      "interchanges": ["CCL"],
+      "demandProfile": {
+        "level": "VeryHigh",
+        "peakHours": [7, 8, 9, 17, 18, 19],
+        "avgPassengersPerHour": 7800
+      }
+    },
+    {
+      "code": "NS7",
+      "name": "Holland Village",
+      "sequence": 7,
+      "latitude": 1.3000,
+      "longitude": 103.8020,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Moderate",
+        "peakHours": [7, 8, 18, 19],
+        "avgPassengersPerHour": 3500
+      }
+    },
+    {
+      "code": "NS8",
+      "name": "Farrer Road",
+      "sequence": 8,
+      "latitude": 1.2983,
+      "longitude": 103.8146,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Low",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 2100
+      }
+    },
+    {
+      "code": "NS9",
+      "name": "Tan Kah Kee",
+      "sequence": 9,
+      "latitude": 1.2988,
+      "longitude": 103.8238,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Low",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 1950
+      }
+    },
+    {
+      "code": "NS10",
+      "name": "Orchard",
+      "sequence": 10,
+      "latitude": 1.3041,
+      "longitude": 103.8328,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "VeryHigh",
+        "peakHours": [10, 11, 12, 14, 15, 16, 18, 19],
+        "avgPassengersPerHour": 9200
+      }
+    },
+    {
+      "code": "NS11",
+      "name": "Somerset",
+      "sequence": 11,
+      "latitude": 1.3047,
+      "longitude": 103.8387,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "High",
+        "peakHours": [10, 11, 12, 15, 16, 18, 19],
+        "avgPassengersPerHour": 6100
+      }
+    },
+    {
+      "code": "NS12",
+      "name": "Dhoby Ghaut",
+      "sequence": 12,
+      "latitude": 1.2983,
+      "longitude": 103.8466,
+      "interchanges": ["CCL", "NEL"],
+      "demandProfile": {
+        "level": "VeryHigh",
+        "peakHours": [7, 8, 9, 17, 18, 19],
+        "avgPassengersPerHour": 8900
+      }
+    },
+    {
+      "code": "NS13",
+      "name": "City Hall",
+      "sequence": 13,
+      "latitude": 1.2919,
+      "longitude": 103.8537,
+      "interchanges": ["EWL"],
+      "demandProfile": {
+        "level": "VeryHigh",
+        "peakHours": [8, 9, 17, 18, 19],
+        "avgPassengersPerHour": 9100
+      }
+    },
+    {
+      "code": "NS14",
+      "name": "Raffles Place",
+      "sequence": 14,
+      "latitude": 1.2847,
+      "longitude": 103.8503,
+      "interchanges": ["EWL"],
+      "demandProfile": {
+        "level": "VeryHigh",
+        "peakHours": [8, 9, 17, 18, 19],
+        "avgPassengersPerHour": 9300
+      }
+    },
+    {
+      "code": "NS15",
+      "name": "Marina Bay",
+      "sequence": 15,
+      "latitude": 1.2787,
+      "longitude": 103.8599,
+      "interchanges": ["CCL"],
+      "demandProfile": {
+        "level": "High",
+        "peakHours": [8, 9, 11, 12, 17, 18],
+        "avgPassengersPerHour": 6800
+      }
+    },
+    {
+      "code": "NS16",
+      "name": "Marina South Pier",
+      "sequence": 16,
+      "latitude": 1.2707,
+      "longitude": 103.8690,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Moderate",
+        "peakHours": [11, 12, 14, 15],
+        "avgPassengersPerHour": 3800
+      },
+      "isTerminal": true
+    },
+    {
+      "code": "NS17",
+      "name": "Ang Mo Kio",
+      "sequence": 17,
+      "latitude": 1.3722,
+      "longitude": 103.8495,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "High",
+        "peakHours": [7, 8, 9, 17, 18, 19],
+        "avgPassengersPerHour": 5800
+      }
+    },
+    {
+      "code": "NS18",
+      "name": "Bartley",
+      "sequence": 18,
+      "latitude": 1.3793,
+      "longitude": 103.8483,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Moderate",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 2800
+      }
+    },
+    {
+      "code": "NS19",
+      "name": "Serangoon",
+      "sequence": 19,
+      "latitude": 1.3732,
+      "longitude": 103.8724,
+      "interchanges": ["CCL"],
+      "demandProfile": {
+        "level": "VeryHigh",
+        "peakHours": [7, 8, 9, 17, 18, 19],
+        "avgPassengersPerHour": 8100
+      }
+    },
+    {
+      "code": "NS20",
+      "name": "Kovan",
+      "sequence": 20,
+      "latitude": 1.3815,
+      "longitude": 103.8848,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Moderate",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 3100
+      }
+    },
+    {
+      "code": "NS21",
+      "name": "Hougang",
+      "sequence": 21,
+      "latitude": 1.3697,
+      "longitude": 103.8926,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Moderate",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 4200
+      }
+    },
+    {
+      "code": "NS22",
+      "name": "Buangkok",
+      "sequence": 22,
+      "latitude": 1.3795,
+      "longitude": 103.8893,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Low",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 2200
+      }
+    },
+    {
+      "code": "NS23",
+      "name": "Sengkang",
+      "sequence": 23,
+      "latitude": 1.3915,
+      "longitude": 103.8945,
+      "interchanges": ["SKLRT"],
+      "demandProfile": {
+        "level": "High",
+        "peakHours": [7, 8, 9, 17, 18, 19],
+        "avgPassengersPerHour": 6500
+      }
+    },
+    {
+      "code": "NS24",
+      "name": "Punggol",
+      "sequence": 24,
+      "latitude": 1.4047,
+      "longitude": 103.9039,
+      "interchanges": ["PGLRT"],
+      "demandProfile": {
+        "level": "High",
+        "peakHours": [7, 8, 9, 17, 18, 19],
+        "avgPassengersPerHour": 6200
+      }
+    },
+    {
+      "code": "NS25",
+      "name": "Woodlands",
+      "sequence": 25,
+      "latitude": 1.4361,
+      "longitude": 103.8281,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "VeryHigh",
+        "peakHours": [7, 8, 9, 17, 18, 19],
+        "avgPassengersPerHour": 7900
+      }
+    },
+    {
+      "code": "NS26",
+      "name": "Admiralty",
+      "sequence": 26,
+      "latitude": 1.4476,
+      "longitude": 103.8183,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Moderate",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 3400
+      }
+    },
+    {
+      "code": "NS27",
+      "name": "Sembawang",
+      "sequence": 27,
+      "latitude": 1.4584,
+      "longitude": 103.8243,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Moderate",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 3300
+      }
+    },
+    {
+      "code": "NS28",
+      "name": "Yishun",
+      "sequence": 28,
+      "latitude": 1.4285,
+      "longitude": 103.8353,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "High",
+        "peakHours": [7, 8, 9, 17, 18, 19],
+        "avgPassengersPerHour": 5600
+      },
+      "isTerminal": true
+    }
+  ]
+}
