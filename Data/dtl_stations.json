@@ -1,0 +1,334 @@
+{
+  "line": "DTL",
+  "lineName": "Downtown Line",
+  "lineColor": "#005EB8",
+  "stations": [
+    {
+      "code": "DT1",
+      "name": "Bukit Panjang",
+      "sequence": 1,
+      "latitude": 1.3751,
+      "longitude": 103.7693,
+      "interchanges": ["BPLRT"],
+      "demandProfile": {
+        "level": "Moderate",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 3900
+      },
+      "isTerminal": true
+    },
+    {
+      "code": "DT2",
+      "name": "Cashew",
+      "sequence": 2,
+      "latitude": 1.3648,
+      "longitude": 103.7849,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Low",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 2100
+      }
+    },
+    {
+      "code": "DT3",
+      "name": "Hillview",
+      "sequence": 3,
+      "latitude": 1.3524,
+      "longitude": 103.7944,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Low",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 2300
+      }
+    },
+    {
+      "code": "DT4",
+      "name": "Beauty World",
+      "sequence": 4,
+      "latitude": 1.3413,
+      "longitude": 103.7777,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Low",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 2000
+      }
+    },
+    {
+      "code": "DT5",
+      "name": "King Albert Park",
+      "sequence": 5,
+      "latitude": 1.3361,
+      "longitude": 103.8070,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Low",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 1900
+      }
+    },
+    {
+      "code": "DT6",
+      "name": "Sixth Avenue",
+      "sequence": 6,
+      "latitude": 1.3285,
+      "longitude": 103.8279,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Moderate",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 3400
+      }
+    },
+    {
+      "code": "DT7",
+      "name": "Tan Kah Kee",
+      "sequence": 7,
+      "latitude": 1.3207,
+      "longitude": 103.8309,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Low",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 2100
+      }
+    },
+    {
+      "code": "DT8",
+      "name": "Stevens",
+      "sequence": 8,
+      "latitude": 1.3138,
+      "longitude": 103.8237,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Low",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 1800
+      }
+    },
+    {
+      "code": "DT9",
+      "name": "Newton",
+      "sequence": 9,
+      "latitude": 1.3117,
+      "longitude": 103.8350,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Moderate",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 3600
+      }
+    },
+    {
+      "code": "DT10",
+      "name": "Little India",
+      "sequence": 10,
+      "latitude": 1.3077,
+      "longitude": 103.8482,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "High",
+        "peakHours": [10, 11, 12, 15, 16, 18, 19],
+        "avgPassengersPerHour": 5700
+      }
+    },
+    {
+      "code": "DT11",
+      "name": "Rochor",
+      "sequence": 11,
+      "latitude": 1.3001,
+      "longitude": 103.8538,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Moderate",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 3200
+      }
+    },
+    {
+      "code": "DT12",
+      "name": "Bugis",
+      "sequence": 12,
+      "latitude": 1.2985,
+      "longitude": 103.8546,
+      "interchanges": ["EWL"],
+      "demandProfile": {
+        "level": "High",
+        "peakHours": [10, 11, 12, 15, 16, 18, 19],
+        "avgPassengersPerHour": 6800
+      }
+    },
+    {
+      "code": "DT13",
+      "name": "Promenade",
+      "sequence": 13,
+      "latitude": 1.2874,
+      "longitude": 103.8583,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Moderate",
+        "peakHours": [10, 11, 15, 18, 19],
+        "avgPassengersPerHour": 4200
+      }
+    },
+    {
+      "code": "DT14",
+      "name": "Bayfront",
+      "sequence": 14,
+      "latitude": 1.2816,
+      "longitude": 103.8600,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "High",
+        "peakHours": [10, 11, 12, 14, 15, 18, 19],
+        "avgPassengersPerHour": 6500
+      }
+    },
+    {
+      "code": "DT15",
+      "name": "Downtown",
+      "sequence": 15,
+      "latitude": 1.2793,
+      "longitude": 103.8455,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "High",
+        "peakHours": [8, 9, 17, 18, 19],
+        "avgPassengersPerHour": 6200
+      }
+    },
+    {
+      "code": "DT16",
+      "name": "Outram Park",
+      "sequence": 16,
+      "latitude": 1.2773,
+      "longitude": 103.8366,
+      "interchanges": ["NEL", "CCL"],
+      "demandProfile": {
+        "level": "High",
+        "peakHours": [7, 8, 9, 17, 18, 19],
+        "avgPassengersPerHour": 6400
+      }
+    },
+    {
+      "code": "DT17",
+      "name": "Tiong Bahru",
+      "sequence": 17,
+      "latitude": 1.2856,
+      "longitude": 103.8273,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Moderate",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 3900
+      }
+    },
+    {
+      "code": "DT18",
+      "name": "Redhill",
+      "sequence": 18,
+      "latitude": 1.2943,
+      "longitude": 103.8167,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Low",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 2400
+      }
+    },
+    {
+      "code": "DT19",
+      "name": "Ayer Rajah",
+      "sequence": 19,
+      "latitude": 1.3027,
+      "longitude": 103.8065,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Moderate",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 3800
+      }
+    },
+    {
+      "code": "DT20",
+      "name": "Pasir Panjang",
+      "sequence": 20,
+      "latitude": 1.3147,
+      "longitude": 103.7987,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Moderate",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 3200
+      }
+    },
+    {
+      "code": "DT21",
+      "name": "Haw Par Villa",
+      "sequence": 21,
+      "latitude": 1.3187,
+      "longitude": 103.8043,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Low",
+        "peakHours": [10, 11, 14, 15],
+        "avgPassengersPerHour": 2500
+      }
+    },
+    {
+      "code": "DT22",
+      "name": "Kent Ridge",
+      "sequence": 22,
+      "latitude": 1.3269,
+      "longitude": 103.8013,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Moderate",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 3500
+      }
+    },
+    {
+      "code": "DT23",
+      "name": "Clementi",
+      "sequence": 23,
+      "latitude": 1.3391,
+      "longitude": 103.7682,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "High",
+        "peakHours": [7, 8, 9, 17, 18, 19],
+        "avgPassengersPerHour": 5900
+      }
+    },
+    {
+      "code": "DT24",
+      "name": "Pioneering",
+      "sequence": 24,
+      "latitude": 1.3500,
+      "longitude": 103.7520,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Low",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 2000
+      }
+    },
+    {
+      "code": "DT25",
+      "name": "Sunview",
+      "sequence": 25,
+      "latitude": 1.3521,
+      "longitude": 103.7440,
+      "interchanges": [],
+      "demandProfile": {
+        "level": "Moderate",
+        "peakHours": [7, 8, 17, 18],
+        "avgPassengersPerHour": 3100
+      },
+      "isTerminal": true
+    }
+  ]
+}
